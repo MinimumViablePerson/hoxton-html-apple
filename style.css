@@ -1,0 +1,214 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+}
+
+img {
+  width: 100%;
+}
+
+header {
+  background-color: #000000cc;
+
+  display: grid;
+  justify-content: center;
+
+  position: sticky;
+  top: 0;
+  z-index: 10;
+
+  backdrop-filter: blur(20px);
+}
+
+.mobile {
+  display: none;
+}
+
+header .top-menu {
+  list-style: none;
+
+  display: grid;
+  grid-auto-flow: column;
+  align-items: center;
+
+  gap: 1.3rem;
+}
+
+header .top-menu a {
+  color: #ffffffaa;
+  text-decoration: none;
+}
+
+header .top-menu a:hover {
+  color: #ffffffff;
+}
+
+main .top-notification {
+  background-color: #f5f5f7;
+  padding: 0.8rem;
+
+  text-align: center;
+
+  font-size: 0.9rem;
+  font-weight: 300;
+}
+
+main .top-notification a {
+  text-decoration: none;
+  color: rgb(70, 103, 252);
+}
+
+main .hero-section {
+  background-image: url(/assets/hero-iphone-13.jpg);
+  background-size: cover;
+  background-position: center;
+
+  height: 600px;
+
+  text-align: center;
+
+  padding: 2rem;
+
+  position: relative;
+}
+
+main .hero-section h2 {
+  font-size: 3.2rem;
+  font-weight: 600;
+
+  margin-bottom: 0.2em;
+}
+
+main .hero-section h3 {
+  font-size: 1.7rem;
+  font-weight: 300;
+
+  margin-bottom: 0.5em;
+}
+
+main .hero-section ul {
+  list-style: none;
+  display: grid;
+  grid-auto-flow: column;
+  justify-content: center;
+  gap: 1rem;
+
+  width: 100%;
+  left: 0;
+  position: absolute;
+  z-index: 9;
+}
+
+main .hero-section ul a {
+  font-size: 1.3rem;
+  text-decoration: none;
+  color: rgb(70, 103, 252);
+}
+
+main .hero-section ul a:hover {
+  text-decoration: underline;
+}
+
+.hero-section-wrapper-link {
+  /* background-color: black; */
+
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+
+  text-decoration: unset;
+  color: unset;
+
+  z-index: 1;
+}
+
+.products {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.products ul {
+  list-style: none;
+}
+
+.product {
+  display: grid;
+  align-content: start;
+  justify-content: center;
+  height: 400px;
+
+  padding: 2rem;
+
+  background-size: cover;
+  background-position: center;
+}
+
+.product.airpods {
+  background-image: url(https://www.apple.com/v/home/ag/images/promos/airpods/tile_airpods__fuv6vgn42y2q_large_2x.jpg);
+  align-content: end;
+}
+
+.product.homepod-mini {
+  background-image: url(https://www.apple.com/v/home/ag/images/promos/homepod-mini/tile_homepod_mini__b73w4z3ljymu_large_2x.jpg);
+}
+
+.product.apple-watch {
+  background-image: url(https://www.apple.com/v/home/ag/images/promos/watch-series-7/tile_lte_avail__eqbz3ui0dz8m_large_2x.jpg);
+}
+
+.product.ipad-mini {
+  background-image: url(https://www.apple.com/v/home/ag/images/promos/ipad-mini/promo_ipad_mini__spq4zjcuuaie_large_2x.jpg);
+}
+
+footer {
+  background-color: #f5f5f7;
+}
+
+footer.desktop {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  padding: 1rem;
+}
+
+footer.desktop ul {
+  list-style: none;
+}
+
+footer.mobile {
+  display: none;
+
+  padding: 1rem;
+}
+
+footer.mobile ul {
+  list-style: none;
+  display: grid;
+  /* gap: 1rem; */
+}
+
+footer.mobile li {
+  border-bottom: solid 1px #00000020;
+  padding: 0.5rem 0;
+}
+
+@media screen and (max-width: 733px) {
+  .desktop {
+    display: none !important;
+  }
+
+  .mobile {
+    display: grid !important;
+  }
+
+  .products {
+    grid-template-columns: 1fr;
+  }
+}
